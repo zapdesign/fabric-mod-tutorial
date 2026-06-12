@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.zaappp.tutorialmod.blocks.ModBlocks;
 import net.zaappp.tutorialmod.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -16,7 +17,12 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
-
+        blockModelGenerators.createTrivialCube(ModBlocks.FLUORITE_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.RAW_FLUORITE_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.FLUORITE_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.FLUORITE_DEEPSLATE_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.FLUORITE_NETHER_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.FLUORITE_END_ORE);
     }
 
     @Override

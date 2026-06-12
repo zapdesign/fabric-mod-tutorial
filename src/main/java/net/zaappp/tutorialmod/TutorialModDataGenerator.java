@@ -2,6 +2,8 @@ package net.zaappp.tutorialmod;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.zaappp.tutorialmod.datagen.ModBlockLootTableProvider;
+import net.zaappp.tutorialmod.datagen.ModBlockTagsProvider;
 import net.zaappp.tutorialmod.datagen.ModModelProvider;
 
 public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
@@ -10,5 +12,7 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 		var pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ModModelProvider::new);
+		pack.addProvider(ModBlockTagsProvider::new);
+		pack.addProvider(ModBlockLootTableProvider::new);
 	}
 }

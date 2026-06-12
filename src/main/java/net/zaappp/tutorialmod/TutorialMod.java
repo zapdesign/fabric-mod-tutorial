@@ -2,6 +2,7 @@ package net.zaappp.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.zaappp.tutorialmod.blocks.ModBlocks;
 import net.zaappp.tutorialmod.creativemodtab.ModCreativeModTabs;
 import net.zaappp.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
@@ -13,8 +14,9 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
 		ModCreativeModTabs.registerModCreativeModTabs();
+
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
